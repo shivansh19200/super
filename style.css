@@ -136,25 +136,15 @@
     }
 }
 
-/*@media (400px <= width <= 600px){
-
-    body{
-        scale: 0.4;
-    }
-
-    /*.gameContainer{
+@media (400px <= width <= 600px){
+    .gameContainer{
         position: relative;
         margin: auto auto;
-        scale: 0.8;
-        /* margin-left: -20px; 
+        scale: 0.7;
     }
-    .status{
-        position: relative;
-        margin-left: auto;
-    } 
 } 
 
-.Oturn{
+/*.Oturn{
     background-color: white;
     text-align: center;
     font-size: 40px;
