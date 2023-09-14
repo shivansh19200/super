@@ -1,0 +1,173 @@
+.board{
+    margin-top: 10px;
+    border: 0.05px solid black;
+    scale: 0.8;
+}
+
+#a, #c{
+    background-color: peachpuff;
+}
+
+#b,#d{
+    background-color: rgb(18, 82, 5);
+}
+
+/* SUPER TIC TAC TOE */
+
+*{
+    background-color: #56baed;
+}
+.cell{
+    background-color: white;
+    width: 75px;
+    height: 75px;
+    border: 2px solid #000;
+    border-radius: 4px;
+}
+
+.cellText{
+    padding-left: 2.8vh;
+    text-align: center;
+    font-size: 60px;
+}
+
+.cellmini{
+    width: 25px;
+    height: 25px;
+    border: 2px solid #000;
+    text-align: center;
+    cursor: pointer;
+}
+
+.cellmini:hover{
+    background: #27e89e;
+    transition: all 0.25s ease-in;
+}
+
+.cellContainer{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    row-gap: 1px;
+    width: 240px;
+    margin: auto;
+    margin-top: 25vh;
+    scale: 2;
+}
+
+.cellContainerMini{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    width: auto;
+    margin-top: -5px;
+    align-items: center;
+    justify-content: center;
+    scale: 0.7;
+}
+
+.gameContainer{
+    transition: all 0.3s ease;
+    padding: -10vh;
+}
+
+@keyframes hideAnim {
+    from{scale: 1; opacity: 1;}
+    to{scale: 0; opacity: 0; pointer-events: none;}
+}
+
+@keyframes showAnim {
+    from{visibility:visible; opacity: 0;}
+    to{visibility:visible; opacity: 1;}
+}
+
+@keyframes btnAnim {
+    from {background-color: rgba(0, 0, 0, 0);}
+    to {background-color: rgba(0, 0, 0, 1);}
+}
+
+.test{
+    border: none;
+}
+
+.restartBtn{
+    visibility: hidden;
+    color: black;
+    transition: all 0.5s ease;
+}
+
+.restartBtn:hover{
+    cursor: pointer;
+    color: white;
+    background-color: #000;
+}
+
+.restartBtn.show{
+    animation: showAnim 1.0s forwards;
+}
+
+.status{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    align-items: center;
+    margin: auto;
+    /*column-gap: 20vh;*/
+    width: 400px;
+    height: 50px;
+    position: relative;
+}
+
+/*.Xturn{
+    background-color: white;
+    text-align: center;
+    font-size: 40px;
+    border-radius: 10px;
+    width: 200px;
+    height: 50px;
+}
+
+/*@media (300px <= width <= 400px){
+
+    
+    body{
+        scale: 0.4;
+        position: relative;
+        margin: auto;
+    }
+
+    .gameContainer{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-90%, 30%);
+    }
+}
+
+@media (400px <= width <= 600px){
+
+    body{
+        scale: 0.4;
+    }
+
+    /*.gameContainer{
+        position: relative;
+        margin: auto auto;
+        scale: 0.8;
+        /* margin-left: -20px; 
+    }
+    .status{
+        position: relative;
+        margin-left: auto;
+    } 
+} 
+
+.Oturn{
+    background-color: white;
+    text-align: center;
+    font-size: 40px;
+    border-radius: 10px;
+    width: 200px;
+    height: 50px;
+}
+*/
